@@ -1,0 +1,13 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    <h2>Contact us</h2>
+    <p> Step {{ wizard.steps.step1 }} of {{ wizard.steps.count }} </p>
+    {% for field in form %}
+        {{field.error}}
+    {% endfor %}
+    <form action="/blog/contact/" method="post">{% csrf_token %}
+        {{ wizard.management_form }}
+        {{ wizard.form }}
+        <input type="submit" value="Submit" />
+    </form>
+{% endblock content %}
