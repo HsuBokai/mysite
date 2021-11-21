@@ -1,2 +1,2 @@
 
-docker build -t testserver:1.0 . --no-cache
+docker build -t testserver:1.1 .
