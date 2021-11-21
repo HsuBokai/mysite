@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^blog/', include('blog.urls')),
     url(r'^vue/', TemplateView.as_view(template_name='index.html')),
+    url(r'api/news/', include('news.urls')),
 ]
